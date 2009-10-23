@@ -9,15 +9,19 @@ if [ -d "$HOME/.emacs.d/info" ]; then
     export INFOPATH
 fi
 
+if [ "$MANPATH" = "" ]; then
+    export MANPATH=`manpath`":$HOME/perl/man"
+fi
+
+# set local path
+if [ -d "$HOME/bin" ]; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
 	. "$HOME/.bashrc"
     fi
-fi
-
-# set local bin
-if [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$PATH"
 fi

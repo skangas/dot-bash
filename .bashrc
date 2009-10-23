@@ -49,22 +49,20 @@ alias wgetm="wget --user-agent='Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.5
 #########################################################################
 ## environment variables
 
+export EMAIL="stefankangas@gmail.com"
+
 # don't put duplicate lines in the history
 export HISTCONTROL=ignoredups
 
-# quadruple the history size from the default of 500
-export HISTFILESIZE=2000
-export HISTSIZE=2000
+# increase the history size from the default of 500
+export HISTFILESIZE=10000
+export HISTSIZE=10000
 
 # don't save these commands in history
-export HISTIGNORE="ssh *:scp *"
+export HISTIGNORE="ssh *:scp *:ls:top:mount"
 
 # If set, the value is executed as a command prior to issuing each primary prompt.
 export PROMPT_COMMAND='history -a'
-
-if [ "$MANPATH" = "" ]; then
-    export MANPATH=`manpath`":$HOME/perl/man"
-fi
 
 #########################################################################
 ## shell options
