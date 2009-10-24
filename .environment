@@ -55,7 +55,7 @@ export PAGER
 #LESSCHARSET=latin1
 #export LESSCHARSET
 
-GIT_PAGER=less
+GIT_PAGER=more
 export GIT_PAGER
 
 # Set COLORTERM for slang programs if this is a color terminal
