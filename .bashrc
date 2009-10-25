@@ -7,7 +7,7 @@
 
 # The newer (?) method of detecting an interactive shell.
 # This works with Fedora Core 6, and probably most modern versions of
-# Linux. 
+# Linux.
 if shopt -q login_shell ; then
     # Disable xon xoff.
     stty stop undef
@@ -18,6 +18,8 @@ fi
 # run for both .bashrc and .xsession
 . ~/.environment
 
+# this is safe enough yet still convenient -- stuff that is more critical should
+# be changed manually
 umask 022
 
 # logout root after 600 seconds. why the hell are we root anyways? use sudo
@@ -43,13 +45,16 @@ alias ls="ls -F"
 alias lynx="lynx -accept_all_cookies"
 alias scp="scp -prv"
 alias ssh="ssh -v"
-alias wget="wget --user-agent='Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.5) Gecko/20050221 Firefox/1.0 (Ubuntu)' --random-wait"
-alias wgetm="wget --user-agent='Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.5) Gecko/20050221 Firefox/1.0 (Ubuntu)' -r -N -l inf --no-remove-listing -k -K"
+
+# set mock user agent
+alias wget="wget --user-agent='Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.3) Gecko/20091010 Firefox/3.0.5 (Debian-3.5.3-2)' --random-wait"
+# mirror a site -- only following relative links
+alias wgetm="wget --mirror --relative --page-requisites --convert-links --html-extension --no-host-directories --directory-prefix=."
+# aggressive mirroring; no wait time
+alias wgetma="wgetm --wait 0"
 
 #########################################################################
-## environment variables
-
-export EMAIL="stefankangas@gmail.com"
+## history
 
 # don't put duplicate lines in the history
 export HISTCONTROL=ignoredups
@@ -66,52 +71,29 @@ export PROMPT_COMMAND='history -a'
 
 #########################################################################
 ## shell options
-shopt -s cdspell       # ignore minor typos when using cd
-shopt -s checkwinsize  # this should help (?)
-shopt -s histappend    # append to history file, don't overwrite
+
+# minor errors in the spelling of a directory component in a cd command will be
+# corrected
+shopt -s cdspell
+
+# If set, bash checks the window size after each command and, if necessary,
+# updates the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# append to history file, don't overwrite
+shopt -s histappend
+
+# attempt to save all lines of a multiple-line command in the same history
+# entry.  This allows easy re-editing of multi-line commands.
 shopt -s cmdhist
-set -o noclobber       # do not overwrite files with redirection >
+
+# do not overwrite files with redirection >
+set -o noclobber
 
 #########################################################################
 ## prompt
 
-# colors (ugly as hell)
-Black="$(tput setaf 0)"
-BlackBG="$(tput setab 0)"
-DarkGrey="$(tput bold ; tput setaf 0)"
-LightGrey="$(tput setaf 7)"
-LightGreyBG="$(tput setab 7)"
-White="$(tput bold ; tput setaf 7)"
-Red="$(tput setaf 1)"
-RedBG="$(tput setab 1)"
-LightRed="$(tput bold ; tput setaf 1)"
-Green="$(tput setaf 2)"
-GreenBG="$(tput setab 2)"
-LightGreen="$(tput bold ; tput setaf 2)"
-Brown="$(tput setaf 3)"
-BrownBG="$(tput setab 3)"
-Yellow="$(tput bold ; tput setaf 3)"
-Blue="$(tput setaf 4)"
-BlueBG="$(tput setab 4)"
-LightBlue="$(tput bold ; tput setaf 4)"
-Purple="$(tput setaf 5)"
-PurpleBG="$(tput setab 5)"
-Pink="$(tput bold ; tput setaf 5)"
-Cyan="$(tput setaf 6)"
-CyanBG="$(tput setab 6)"
-LightCyan="$(tput bold ; tput setaf 6)"
-Normal="$(tput sgr0)" # No Color
-
-#local COLOR1="\[\033[0;36m\]"
-#local COLOR2="\[\033[1;36m\]"
-#local COLOR3="\[\033[1;30m\]"
-#local COLOR4="\[\033[0m\]"
-
-C1="$Normal"
-C2="$Normal$Cyan"
-C3="$Normal$LightCyan"
-
-PS1="\n$C3[$C1\t$C3] $C1\u@\h$C2:$C1\w\n$C2\$ $C1"
+PS1="\n[\t] \u@\h:\w\n\$ "
 
 #########################################################################
 ## $TERM specific
@@ -133,29 +115,29 @@ case "$TERM" in
 esac
 
 #########################################################################
-## colors for less -- gives colorized man pages
+## Colors
 
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
-
-#########################################################################
-## Colors for `ls`
-
-OS=`uname -a|cut -d" " -f1`
 if [ "$TERM" != "dumb" ]; then
+    # colors for ls
+    OS=`uname -a|cut -d" " -f1`
     if [ "$OS" == "FreeBSD" ]; then
         export CLICOLOR=""
         export LSCOLORS="Exfxcxdxbxegedabagacad"
+
     elif [ "$OS" == "Linux" ]; then
         if [ -e $HOME/.dircolors ]; then
             eval "`dircolors -b $HOME/.dircolors`"
         fi
         alias ls='ls --color=auto -F'
     fi
+
+    # colors for less -- gives colorized man pages
+    export LESS_TERMCAP_mb=$'\E[01;31m'
+    export LESS_TERMCAP_md=$'\E[01;31m'
+    export LESS_TERMCAP_me=$'\E[0m'
+    export LESS_TERMCAP_se=$'\E[0m'
+    export LESS_TERMCAP_so=$'\E[01;44;33m'
+    export LESS_TERMCAP_ue=$'\E[0m'
+    export LESS_TERMCAP_us=$'\E[01;32m'
 fi
 

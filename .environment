@@ -1,19 +1,24 @@
 #!/bin/sh
-# based on joey hess
+# this is sourced from ~/.xsession and ~/.bashrc (idea by Joey Hess)
 
 export EMAIL="stefankangas@gmail.com"
 
 # locale -a lists it differently than how it needs to be set..
-if locale -a 2>/dev/null | grep -iq ^en_US.utf8\$; then
+AVAILABLE_LOCALES=`locale -a 2>/dev/null`
+
+if echo $AVAILABLE_LOCALES | grep -iq ^en_US.utf8\$; then
 	LANG=en_US.UTF-8
-elif locale -a 2>/dev/null | grep -iq ^en_US\$; then
+elif echo $AVAILABLE_LOCALES | grep -iq ^en_US\$; then
 	LANG=en_US
 fi
 
-# No matter my LANG, I want sane unix-style sorting.
-LC_COLLATE=C
-export LC_COLLATE
-# And good old ls -l dates
+# # sorting according to swedish
+# if echo $AVAILABLE_LOCALES | grep -iq ^sv_SE.
+     LC_COLLATE=en_US
+     export=LC_COLLATE
+# fi
+
+# nice dates
 LC_TIME=C
 export LC_TIME
 
@@ -55,7 +60,7 @@ export PAGER
 #LESSCHARSET=latin1
 #export LESSCHARSET
 
-GIT_PAGER=less
+GIT_PAGER=more
 export GIT_PAGER
 
 # Set COLORTERM for slang programs if this is a color terminal
