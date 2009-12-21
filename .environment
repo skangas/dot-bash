@@ -13,10 +13,8 @@ elif echo $AVAILABLE_LOCALES | grep -iq ^en_US\$; then
 fi
 
 # # sorting according to swedish
-# if echo $AVAILABLE_LOCALES | grep -iq ^sv_SE.
-     LC_COLLATE=en_US
-     export=LC_COLLATE
-# fi
+LC_COLLATE=C
+export=LC_COLLATE
 
 # nice dates
 LC_TIME=C
@@ -34,7 +32,11 @@ export CVSROOT="$HOME/repos"
 CVS_RSH=ssh
 export CVS_RSH
 
+# perl
 export PERL5LIB="$HOME/perl/lib/perl5"
+
+# java
+export CLASSPATH="/usr/share/java/*:/home/skangas/src/jfsaccounting/trunk/administration/src/:/home/skangas/src/jfsaccounting/trunk/administration/test/:."
 
 # emacs
 if [ -x `which emacsclient` ]; then
@@ -60,7 +62,7 @@ export PAGER
 #LESSCHARSET=latin1
 #export LESSCHARSET
 
-GIT_PAGER=more
+GIT_PAGER=
 export GIT_PAGER
 
 # Set COLORTERM for slang programs if this is a color terminal
