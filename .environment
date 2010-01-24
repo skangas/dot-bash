@@ -28,7 +28,6 @@ export BROWSER="firefox"
 #export DISPLAY=":0.0"
 
 # CVS
-export CVSROOT="$HOME/repos"
 CVS_RSH=ssh
 export CVS_RSH
 
