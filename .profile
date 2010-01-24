@@ -10,12 +10,12 @@ if [ -d "$HOME/.emacs.d/info" ]; then
 fi
 
 if [ "$MANPATH" = "" ]; then
-    export MANPATH=`manpath`":$HOME/perl/man"
+    export MANPATH=`manpath`":$HOME/usr/man"
 fi
 
 # set local path
 if [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$PATH"
+    PATH="$HOME/bin:$HOME/usr/bin:$PATH"
 fi
 
 # if running bash
