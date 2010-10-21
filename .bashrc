@@ -36,13 +36,18 @@ mesg n
 #########################################################################
 ## aliases
 
+alias ..="cd .."
 alias btlaunchmany="btlaunchmany --max_uploads 50 --min_peers 100 --max_initiate 50"
 alias cpan="cpanp"
 alias edit="emacsclient -a emacs -c"
-alias grep="grep --color"
+alias egrep="grep --color=auto"
+alias fgrep="grep --color=auto"
+alias grep="grep --color=auto"
 alias ketchup="ketchup -k ftp://ftp.sunet.se/pub/linux/kernel -r"
+alias ls="l"
 alias ls="ls -F"
 alias lynx="lynx -accept_all_cookies"
+alias r="fc -e-"
 alias scp="scp -prv"
 alias ssh="ssh -v"
 alias mr="GIT_PAGER= mr"
@@ -63,9 +68,6 @@ export HISTCONTROL=ignoredups
 # increase the history size from the default of 500
 export HISTFILESIZE=10000
 export HISTSIZE=10000
-
-# don't save these commands in history
-export HISTIGNORE="ssh *:scp *:ls:top:mount"
 
 # If set, the value is executed as a command prior to issuing each primary prompt.
 export PROMPT_COMMAND='history -a'

@@ -2,6 +2,8 @@
 # this is sourced from ~/.xsession and ~/.bashrc (idea by Joey Hess)
 
 export EMAIL="stefankangas@gmail.com"
+export MANWIDTH=80
+export BROWSER="firefox"
 
 # locale -a lists it differently than how it needs to be set..
 AVAILABLE_LOCALES=`locale -a 2>/dev/null`
@@ -11,58 +13,46 @@ if echo $AVAILABLE_LOCALES | grep -iq ^en_US.utf8\$; then
 elif echo $AVAILABLE_LOCALES | grep -iq ^en_US\$; then
 	LANG=en_US
 fi
-
-# # sorting according to swedish
-LC_COLLATE=C
-export=LC_COLLATE
-
-# nice dates
-LC_TIME=C
-export LC_TIME
-
-# Browser
-export BROWSER="firefox"
+export LC_COLLATE=C
+export LC_CTYPE="sv_SE.UTF-8"
 
 # NOT NEEDED FOR NOW
-#export LC_CTYPE="sv_SE.UTF-8"
 #export DISPLAY=":0.0"
 
 # CVS
-CVS_RSH=ssh
-export CVS_RSH
+export CVS_RSH=SSH
 
-# perl
-export PERL5LIB="$HOME/perl/lib/perl5"
+# Perl
+export PERL5LIB="$HOME/usr/lib/perl5"
 
-# java
+# Java
 export CLASSPATH="/usr/share/java/*:/home/skangas/src/jfsaccounting/trunk/administration/src/:/home/skangas/src/jfsaccounting/trunk/administration/test/:."
 
-# emacs
+# Use local lib
+export LD_LIBRARY_PATH="/home/skangas/usr/lib"
+export LD_RUN_PATH=$LD_LIBRARY_PATH
+
+# Emacs
 if [ -x `which emacsclient` ]; then
     EDITOR="emacsclient"
 else
     EDITOR=emacs
 fi
 export EDITOR
-VISUAL=$EDITOR
-export VISUAL
+export VISUAL=$EDITOR
 export ALTERNATE_EDITOR="vim"
-CVSEDITOR=$EDITOR
-export CVSEDITOR
+export CVSEDITOR=$EDITOR
 
 # Set up less.
-LESS="-iM"
-export LESS
-PAGER=less
-export PAGER
+export LESS="-iM"
+export PAGER=less
 # make less more friendly for non-text input files, see lesspipe(1)
 [[ -x "`which lesspipe`" ]] && eval "$(lesspipe)"
 
 #LESSCHARSET=latin1
 #export LESSCHARSET
 
-GIT_PAGER="less -r"
-export GIT_PAGER
+export GIT_PAGER="less -r"
 
 # Set COLORTERM for slang programs if this is a color terminal
 if [ "$TERM" = "xterm" -o "$TERM" = "linux" ]; then
@@ -71,6 +61,5 @@ fi
 
 # If the system uses GMT, flip it to CEST
 if date | egrep -q 'GMT|UTC'; then
-	TZ=CEST
-	export TZ
+	export TZ=CEST
 fi
