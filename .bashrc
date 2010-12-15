@@ -38,6 +38,7 @@ mesg n
 
 alias ..="cd .."
 alias btlaunchmany="btlaunchmany --max_uploads 50 --min_peers 100 --max_initiate 50"
+alias cal="ncal -bM"
 alias cpan="cpanp"
 alias edit="emacsclient -a emacs -c"
 alias egrep="grep --color=auto"
