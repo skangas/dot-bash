@@ -18,6 +18,9 @@ fi
 # run for both .bashrc and .xsession
 . ~/.environment
 
+# workaround until the urxvt package maintainers get their head together
+[[ $TERM == "rxvt-256color" ]] &&  export TERM="rxvt"
+
 # this is safe enough yet still convenient -- stuff that is more critical should
 # be changed manually
 umask 022
