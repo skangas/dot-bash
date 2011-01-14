@@ -144,16 +144,19 @@ $COL\$ ${txtrst}"
 
 case "$TERM" in
     linux*)
-	alias emacs='emacs -nw'
-	;;
-    xterm*|rxvt*)
-	# set window title
-	PROMPT_COMMAND=$PROMPT_COMMAND'&& echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-	;;
+        alias emacs='emacs -nw'
+        ;;
     screen*)
-	# tell screen what program we're running
-	PS1=$PS1'\[\033k\033\\\\\]'
-	;;
+        # tell screen what program we're running
+        PS1=$PS1'\[\033k\033\\\\\]'
+        # NOTE: there seems to be a problem where hardstatus and xterm title
+        # cannot both be set at the same time. it has been this way for years,
+        # so do not expect a fix any time soon...
+        ;;
+    xterm*|rxvt*)
+        # set window title
+        PROMPT_COMMAND=$PROMPT_COMMAND'&& echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+        ;;
     *)
         ;;
 esac
