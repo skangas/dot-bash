@@ -54,7 +54,7 @@ export PAGER=less
 #LESSCHARSET=latin1
 #export LESSCHARSET
 
-export GIT_PAGER="less -r"
+export GIT_PAGER="less --quit-if-one-screen --raw-control-chars --no-init --hilite-search --SILENT"
 
 # Set COLORTERM for slang programs if this is a color terminal
 if [ "$TERM" = "xterm" -o "$TERM" = "linux" ]; then
