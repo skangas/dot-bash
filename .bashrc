@@ -34,33 +34,6 @@ fi
 mesg n
 
 #########################################################################
-## aliases
-
-alias ..="cd .."
-alias btlaunchmany="btlaunchmany --max_uploads 50 --min_peers 100 --max_initiate 50"
-alias cal="ncal -bM"
-alias cpan="cpanp"
-alias edit="emacsclient -a emacs -c"
-alias egrep="grep --color=auto"
-alias fgrep="grep --color=auto"
-alias grep="grep --color=auto"
-alias ketchup="ketchup -k ftp://ftp.sunet.se/pub/linux/kernel -r"
-alias ls="l"
-alias ls="ls -F"
-alias lynx="lynx -accept_all_cookies"
-alias r="fc -e-"
-alias scp="scp -prv"
-alias ssh="ssh -v"
-alias mr="GIT_PAGER= mr"
-
-# set mock user agent
-alias wget="wget --user-agent='Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.3) Gecko/20091010 Firefox/3.0.5 (Debian-3.5.3-2)' --random-wait"
-# mirror a site -- only following relative links
-alias wgetm="wget --mirror --relative --page-requisites --convert-links --html-extension --no-host-directories --directory-prefix=."
-# aggressive mirroring; no wait time
-alias wgetma="wgetm --wait 0"
-
-#########################################################################
 ## history
 
 # don't put duplicate lines in the history
@@ -190,3 +163,5 @@ fi
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+
+. $HOME/.aliases
