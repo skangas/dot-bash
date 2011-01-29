@@ -1,7 +1,7 @@
-#!/bin/sh
-# this is sourced from ~/.xsession and ~/.bashrc (idea by Joey Hess)
+# ~/.environment -*- mode: sh -*-
+# this is sourced from both ~/.xsession and ~/.bashrc
 
-export EMAIL="stefankangas@gmail.com"
+export EMAIL="skangas@skangas.se"
 export MANWIDTH=80
 export BROWSER="firefox"
 

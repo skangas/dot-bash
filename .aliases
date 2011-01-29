@@ -1,4 +1,4 @@
-# ~/.aliases
+# ~/.aliases -*- mode: sh -*-
 
 # convenience aliases
 alias ..="cd .."
