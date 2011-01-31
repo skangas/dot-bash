@@ -14,8 +14,11 @@ alias cpan="cpanp"
 # do not run fetchmail unless the mailfilter runs
 alias fetchmail="perl ~/.mailfilter/mail.pl --quit && fetchmail"
 
-# various aliases
+# keymaps
+alias qwerty="setxkbmap se_sv_dvorak"
+alias å,.pyf="setxkbmap se"
 
+# various aliases
 alias btlaunchmany="btlaunchmany --max_uploads 50 --min_peers 100 --max_initiate 50"
 alias edit="emacsclient -a emacs -c"
 alias egrep="grep --color=auto"
