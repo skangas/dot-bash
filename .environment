@@ -41,9 +41,11 @@ else
     ALTERNATE_EDITOR="nano"
 fi
 export EDITOR
-export VISUAL=$EDITOR
+VISUAL="$EDITOR"
+export VISUAL
 export ALTERNATE_EDITOR
-export CVSEDITOR=$EDITOR
+CVSEDITOR="$EDITOR"
+export CVSEDITOR
 
 # Set up less.
 export LESS="-iM"
