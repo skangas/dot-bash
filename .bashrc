@@ -164,4 +164,8 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-. $HOME/.aliases
+# Alias definitions.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
