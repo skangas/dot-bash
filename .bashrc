@@ -138,15 +138,20 @@ esac
 if [ "$TERM" != "dumb" ]; then
     # colors for ls
     OS=`uname -a|cut -d" " -f1`
-    if [ "$OS" == "FreeBSD" ]; then
+    if [ "$OS" == "Linux" ]; then
+        if [ -x /usr/bin/dircolors ]; then
+            eval "`dircolors -b`"
+            alias ls='ls --color=auto -F'
+            alias dir='dir --color=auto -F'
+            alias vdir='vdir --color=auto -F'
+
+            alias grep='grep --color=auto -F'
+            alias fgrep='fgrep --color=auto -F'
+            alias egrep='egrep --color=auto -F'
+        fi
+    elif [ "$OS" == "FreeBSD" ]; then
         export CLICOLOR=""
         export LSCOLORS="Exfxcxdxbxegedabagacad"
-
-    elif [ "$OS" == "Linux" ]; then
-        if [ -e $HOME/.dircolors ]; then
-            eval "`dircolors -b $HOME/.dircolors`"
-        fi
-        alias ls='ls --color=auto -F'
     fi
 
     # colors for less -- gives colorized man pages
