@@ -31,6 +31,6 @@ alias mr="GIT_PAGER= mr"
 # set mock user agent
 alias wget="wget --user-agent='Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.3) Gecko/20091010 Firefox/3.0.5 (Debian-3.5.3-2)' --random-wait"
 # mirror a site -- only following relative links
-alias wgetm="wget --mirror --relative --page-requisites --convert-links --html-extension --no-host-directories --directory-prefix=."
+alias wgetm="wget --mirror --no-parent --convert-links --page-requisites --html-extension"
 # aggressive mirroring; no wait time
 alias wgetma="wgetm --wait 0"
