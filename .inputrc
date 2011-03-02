@@ -1,0 +1,22 @@
+# ~/.inputrc
+
+set bell-style visible
+
+# word completion be here
+
+# expand tilde upon word completion
+set expand-tilde on
+
+# ignore hidden files
+set match-hidden-files off
+
+# ignore case
+set completion-ignore-case on
+
+# put / after directory names and * after executables
+set visible-stats on
+
+# immediately expand
+set show-all-if-ambiguous on
+
+Control-v: "|less\n"
