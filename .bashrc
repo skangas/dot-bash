@@ -21,9 +21,8 @@ fi
 # workaround until the urxvt package maintainers get their head together
 [[ $TERM == "rxvt-256color" ]] &&  export TERM="rxvt"
 
-# this is safe enough yet still convenient -- stuff that is more critical should
-# be changed manually
-umask 022
+# be paranoid about it. non-critical stuff can always be changed later
+umask 077
 
 # logout root after 600 seconds. why the hell are we root anyways? use sudo
 if [ "$( whoami )" == "root" ]; then
