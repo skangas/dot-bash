@@ -15,6 +15,7 @@ elif echo $AVAILABLE_LOCALES | grep -iq ^en_US\$; then
 fi
 export LC_COLLATE=C
 export LC_CTYPE="sv_SE.UTF-8"
+export TIME_STYLE=long-iso
 
 # NOT NEEDED FOR NOW
 #export DISPLAY=":0.0"

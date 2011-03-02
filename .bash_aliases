@@ -30,12 +30,16 @@ alias mr="GIT_PAGER= mr"
 
 # git
 git-fake-repos() {
-    git init --bare $1.git
-    echo "Fake bare repos (core.worktree = ../../, core.bare = false)"
-    cd $1.git
-    git config core.worktree ../../
-    git config core.bare false
-    cd -
+    if [ "x$1" != "x" ]; then
+        git init --bare $1.git
+        echo "Fake bare repos (core.worktree = ../../, core.bare = false)"
+        cd $1.git
+        git config core.worktree ../../
+        git config core.bare false
+        cd -
+    else
+        echo "Please specify a destination directory"
+    fi
 }
 
 # set mock user agent
