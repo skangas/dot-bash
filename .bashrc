@@ -146,7 +146,7 @@ if [ "$TERM" != "dumb" ]; then
 
             alias grep='grep --color=auto -F'
             alias fgrep='fgrep --color=auto -F'
-            alias egrep='egrep --color=auto -F'
+            alias egrep='egrep --color=auto'
         fi
     elif [ "$OS" == "FreeBSD" ]; then
         export CLICOLOR=""
