@@ -5,8 +5,8 @@ alias ..="cd .."
 alias l="ls"
 alias sl="ls"
 
-# use nice cal command on Debian [ on hold until wheezy... ]
-# alias cal="ncal -bM"
+# use nice cal command on Debian
+alias cal="ncal -bM"
 
 # never use ordinary cpan
 alias cpan="cpanp"
