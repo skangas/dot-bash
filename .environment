@@ -3,7 +3,7 @@
 
 export EMAIL="skangas@skangas.se"
 export MANWIDTH=80
-export BROWSER="firefox"
+export BROWSER="conkeror"
 
 # locale -a lists it differently than how it needs to be set..
 AVAILABLE_LOCALES=`locale -a 2>/dev/null`
