@@ -9,9 +9,10 @@
 # This works with Fedora Core 6, and probably most modern versions of
 # Linux.
 if shopt -q login_shell ; then
-    # Disable xon xoff.
-    stty stop undef
-    stty start undef
+    ## XXX: Disabled for now. Do we need it for rtorrent on startup?
+    # # Disable xon xoff.
+    # stty stop undef
+    # stty start undef
     return
 fi
 
