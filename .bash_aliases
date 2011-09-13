@@ -6,7 +6,7 @@ alias l="ls"
 alias sl="ls"
 
 # use nice cal command on Debian
-alias cal="ncal -bM"
+#alias cal="ncal -bM" # not in squeeze :(
 
 # never use ordinary cpan
 alias cpan="cpanp"
