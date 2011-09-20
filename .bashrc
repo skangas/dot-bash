@@ -174,3 +174,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+#########################################################################
+## Printing at Chalmers
+
+if [ "`hostname`" == "kollontaj" ]; then
+    export CUPS_GSSSERVICENAME="HTTP"
+fi
