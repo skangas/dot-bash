@@ -24,10 +24,11 @@ alias edit="emacsclient -a emacs -c"
 alias ketchup="ketchup -k ftp://ftp.sunet.se/pub/linux/kernel -r"
 alias krbchalmers="kinit -f kangass@CHALMERS.SE"
 alias lynx="lynx -accept_all_cookies"
+alias mr="GIT_PAGER= mr"
 alias r="fc -e-"
+alias rtorrent="ionice -c 3 nice -n 19 rtorrent"
 alias scp="scp -prv"
 alias ssh="ssh -v"
-alias mr="GIT_PAGER= mr"
 
 # git
 git-fake-repos() {
@@ -39,7 +40,15 @@ git-fake-repos() {
         git config core.bare false
         cd -
     else
-        echo "Please specify a destination directory"
+        echo "Please specify a target directory"
+    fi
+}
+
+lowest() {
+    TARGET_PID="`pidof $1`"
+    if [ "$TARGET_PID" != "" ]; then
+        renice -n 19 -p $TARGET_PID
+        ionice -c 3  -p $TARGET_PID
     fi
 }
 
