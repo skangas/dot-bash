@@ -3,6 +3,7 @@
 # convenience aliases
 alias ..="cd .."
 alias l="ls"
+alias ll="ls -l"
 alias sl="ls"
 
 # use nice cal command on Debian
