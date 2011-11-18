@@ -68,3 +68,7 @@ fi
 if date | egrep -q 'GMT|UTC'; then
 	export TZ=CEST
 fi
+
+## We cannot change /etc/hosts on all boxes so...
+export chalmers="remote1.student.chalmers.se"
+export monaden="monaden.dvstud.chalmers.se"
