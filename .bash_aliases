@@ -33,6 +33,12 @@ alias rtorrent="ionice -c 3 nice -n 19 rtorrent"
 alias scp="scp -prv"
 alias ssh="ssh -v"
 
+# short hand for ls
+alias l="ls"
+alias sl="ls"
+alias lsa="ls -al"
+alias lsl="ls -l"
+
 # git
 git-fake-repos() {
     if [ "x$1" != "x" ]; then
