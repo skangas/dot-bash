@@ -3,6 +3,7 @@
 # convenience aliases
 alias ..="cd .."
 alias l="ls"
+alias la="ls -a"
 alias ll="ls -l"
 alias sl="ls"
 
@@ -16,7 +17,11 @@ alias cpan="cpanp"
 alias fetchmail="perl ~/.mailfilter/mail.pl --quit && fetchmail"
 
 # keymaps
+alias qwer="setxkbmap se_sv_dvorak"
+alias qwert="setxkbmap se_sv_dvorak"
 alias qwerty="setxkbmap se_sv_dvorak"
+alias å,.p="setxkbmap se"
+alias å,.py="setxkbmap se"
 alias å,.pyf="setxkbmap se"
 
 # various aliases
