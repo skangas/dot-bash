@@ -3,12 +3,13 @@
 # convenience aliases
 alias ..="cd .."
 alias l="ls"
+alias sl="ls"
 alias la="ls -a"
 alias ll="ls -l"
-alias sl="ls"
+alias lal="ls -al"
 
 # use nice cal command on Debian
-#alias cal="ncal -bM" # not in squeeze :(
+alias cal="cal -m"
 
 # never use ordinary cpan
 alias cpan="cpanp"
@@ -38,11 +39,7 @@ alias rtorrent="ionice -c 3 nice -n 19 rtorrent"
 alias scp="scp -prv"
 alias ssh="ssh -v"
 
-# short hand for ls
-alias l="ls"
-alias sl="ls"
-alias lsa="ls -al"
-alias lsl="ls -l"
+alias spotify="wine ~/.wine/drive_c/Program\ Files/Spotify/spotify.exe"
 
 # git
 git-fake-repos() {
