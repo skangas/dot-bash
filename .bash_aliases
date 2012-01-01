@@ -9,7 +9,7 @@ alias ll="ls -l"
 alias lal="ls -al"
 
 # use nice cal command on Debian
-alias cal="cal -m"
+#alias cal="cal -m"
 
 # never use ordinary cpan
 alias cpan="cpanp"
