@@ -41,7 +41,17 @@ alias ssh="ssh -v"
 
 alias spotify="wine ~/.wine/drive_c/Program\ Files/Spotify/spotify.exe"
 
-# git
+alarm() {
+    sleep-until "$@"
+    mpc play
+    amixer set Master 65536
+}
+
+error() {
+    echo "$@" >&2
+    exit 1;
+}
+
 git-fake-repos() {
     if [ "x$1" != "x" ]; then
         git init --bare $1.git
