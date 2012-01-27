@@ -15,7 +15,7 @@ fi
 
 
 if [ "$MANPATH" = "" ]; then
-    export MANPATH=`manpath`":$HOME/usr/man"
+    export MANPATH=`manpath`":$HOME/usr/share/man"
 fi
 
 # set local path
