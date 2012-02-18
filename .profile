@@ -4,8 +4,8 @@
 
 # From the info manual: However you set INFOPATH, if its last character is a
 # colon, this is replaced by the default (compiled-in) path.
-# INFOPATH="$HOME/.emacs.d/info:$HOME/usr/share/info:/usr/share/info:$INFOPATH"
-# export INFOPATH
+INFOPATH="$HOME/.emacs.d/info:$HOME/usr/share/info:/usr/share/info:$INFOPATH"
+export INFOPATH
 
 if [ "$MANPATH" = "" ]; then
     export MANPATH=`manpath`":$HOME/usr/share/man"
