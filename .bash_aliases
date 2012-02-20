@@ -39,6 +39,7 @@ alias rtorrent="ionice -c 3 nice -n 19 rtorrent"
 alias scp="scp -prv"
 alias ssh="ssh -v"
 
+# convenience aliases
 alias spotify="wine ~/.wine/drive_c/Program\ Files/Spotify/spotify.exe"
 
 alarm() {
