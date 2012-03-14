@@ -74,6 +74,16 @@ lowest() {
     fi
 }
 
+print_chalmers() {
+    sudo cp /etc/cups/client-chalmers.conf /etc/cups/client.conf
+    krbchalmers
+}
+
+print_lokalen() {
+    sudo cp /etc/cups/client-lokalen.conf /etc/cups/client.conf
+    sudo service cups start
+}
+
 sleep-until() {
     args="$@"
     now=`date -d "now" +%s`
