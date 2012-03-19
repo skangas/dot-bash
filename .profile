@@ -12,9 +12,7 @@ if [ "$MANPATH" = "" ]; then
 fi
 
 # set local path
-if [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$HOME/usr/bin:$PATH"
-fi
+PATH="$HOME/bin:$HOME/usr/bin:$HOME/.cabal/bin:$PATH"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
