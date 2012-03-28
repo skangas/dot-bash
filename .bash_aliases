@@ -14,9 +14,6 @@ alias lal="ls -al"
 # never use ordinary cpan
 alias cpan="cpanp"
 
-# do not run fetchmail unless the mailfilter runs
-alias fetchmail="perl ~/.mailfilter/mail.pl --quit && fetchmail"
-
 # keymaps
 alias qwer="setxkbmap se_sv_dvorak"
 alias qwert="setxkbmap se_sv_dvorak"
@@ -41,6 +38,9 @@ alias ssh="ssh -v"
 
 # convenience aliases
 alias spotify="wine ~/.wine/drive_c/Program\ Files/Spotify/spotify.exe"
+
+# sprunge
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
 alarm() {
     sleep-until "$@"
