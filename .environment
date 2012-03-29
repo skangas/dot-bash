@@ -74,6 +74,12 @@ if [ -d $HOME/usr/lib/pkgconfig ]; then
     export PKG_CONFIG_PATH
 fi
 
+## Debian specific stuff
+DEBEMAIL="skangas@skangas.se"
+DEBFULLNAME="Stefan Kangas"
+export DEBEMAIL DEBFULLNAME
+
+
 ## I can't change /etc/hosts on all boxes so...
 export chalmers="remote1.student.chalmers.se"
 export monaden="monaden.dvstud.chalmers.se"
