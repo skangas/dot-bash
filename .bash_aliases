@@ -22,6 +22,8 @@ alias å,.p="setxkbmap se"
 alias å,.py="setxkbmap se"
 alias å,.pyf="setxkbmap se"
 
+alias genpass="apg -c /dev/random -a1 -n1 -m32 -MSNCL"
+
 # various aliases
 alias btlaunchmany="btlaunchmany --max_uploads 50 --min_peers 100 --max_initiate 50"
 alias edit="emacsclient -a emacs -c"
