@@ -37,6 +37,8 @@ alias scp="scp -prv"
 alias ssh="ssh -v"
 
 # convenience aliases
+alias caps="setxkbmap -option ctrl:nocaps"
+alias huey="ssh -YAt huey 'screen -DRR'"
 alias spotify="wine ~/.wine/drive_c/Program\ Files/Spotify/spotify.exe"
 
 # sprunge
