@@ -46,10 +46,19 @@ alias spotify="wine ~/.wine/drive_c/Program\ Files/Spotify/spotify.exe"
 # sprunge
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
-alarm() {
-    sleep-until "$@"
+play_max_volume() {
     mpc play
     amixer set Master 65536
+    amixer sset Master on
+    ### specific to huey
+    amixer -c0 sset Headphone on
+    amixer -c0 sset Front 255
+    amixer -c0 sset Surround 39
+}
+
+alarm() {
+    sleep-until "$@"
+    play_max_volume
 }
 
 error() {
