@@ -38,8 +38,8 @@ alias rtorrent="ionice -c 3 nice -n 19 rtorrent"
 alias scp="scp -prv"
 alias ssh="ssh -v"
 
-alias latest="ls -tr1|tail -1|tr -d '\n' |xargs -0"
-alias latest_mkcpy=cp -n "`latest`" "`latest|sed -r 's/201[0-9]-[0-1][0-9]-[0-3][0-9]/'"\`date +%Y-%m-%d\`/"`"
+alias latest="find -maxdepth 1 -type f -print0|xargs -r0 ls -tr1|tail -1|tr -d '\n' |xargs -0"
+alias latest_mkcpy="cp -n "`latest`" "`latest|sed -r 's/201[0-9]-[0-1][0-9]-[0-3][0-9]/'"\`date +%Y-%m-%d\`/"`""
 
 # convenience aliases
 alias caps="setxkbmap -option ctrl:nocaps"
