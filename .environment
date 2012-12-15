@@ -26,6 +26,9 @@ export CVS_RSH=SSH
 # Perl
 export PERL5LIB="$HOME/usr/lib/perl5"
 
+# Python
+export PYTHONPATH="$HOME/usr/lib/python2.6/site-packages:$PYTHONPATH"
+
 # Java
 export CLASSPATH="/usr/share/java/*:/home/skangas/src/jfsaccounting/trunk/administration/src/:/home/skangas/src/jfsaccounting/trunk/administration/test/:."
 
