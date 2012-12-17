@@ -1,6 +1,7 @@
 # ~/.aliases -*- mode: sh -*-
 
 # convenience aliases
+alias E="SUDO_EDITOR='emacsclient -c -a emacs' sudoedit"
 alias ..="cd .."
 alias l="ls"
 alias sl="ls"
