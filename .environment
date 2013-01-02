@@ -82,6 +82,7 @@ DEBEMAIL="skangas@skangas.se"
 DEBFULLNAME="Stefan Kangas"
 export DEBEMAIL DEBFULLNAME
 
+export MPD_HOST="/home/skangas/.mpd/socket"
 
 ## I can't change /etc/hosts on all boxes so...
 export chalmers="remote1.student.chalmers.se"
