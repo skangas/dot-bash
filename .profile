@@ -12,7 +12,8 @@ if [ "$MANPATH" = "" ]; then
 fi
 
 # set local path
-PATH="$HOME/bin:$HOME/usr/bin:$HOME/.cabal/bin:$PATH"
+PATH="$HOME/bin:$HOME/usr/bin:$HOME/.local/bin:$HOME/.cabal/bin:$PATH"
+PATH="$HOME/src/git-annex.linux:$PATH"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
