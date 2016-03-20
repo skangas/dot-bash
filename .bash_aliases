@@ -8,6 +8,7 @@ alias sl="ls"
 alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
+alias hist="history"
 
 # use nice cal command on Debian
 #alias cal="cal -m"
