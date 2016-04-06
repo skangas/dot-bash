@@ -2,7 +2,8 @@
 # this is sourced from both ~/.xsession and ~/.bashrc
 
 export EMAIL="skangas@skangas.se"
-export MANWIDTH=80
+# MANWIDTH seems to screw up e.g. `man convert`:
+# export MANWIDTH=80
 export BROWSER="conkeror"
 
 # locale -a lists it differently than how it needs to be set..
