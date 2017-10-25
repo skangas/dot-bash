@@ -1,3 +1,5 @@
+
+
 # ~skangas/.bashrc
 
 # If not running interactively, don't do anything
@@ -180,3 +182,18 @@ fi
 if [ "`hostname`" == "kollontaj" ]; then
     export CUPS_GSSSERVICENAME="HTTP"
 fi
+# Include Drush bash customizations.
+if [ -f "/home/skangas/.drush/drush.bashrc" ] ; then
+  source /home/skangas/.drush/drush.bashrc
+fi
+
+# Include Drush completion.
+if [ -f "/home/skangas/.drush/drush.complete.sh" ] ; then
+  source /home/skangas/.drush/drush.complete.sh
+fi
+
+# Include Drush prompt customizations.
+if [ -f "/home/skangas/.drush/drush.prompt.sh" ] ; then
+  source /home/skangas/.drush/drush.prompt.sh
+fi
+
