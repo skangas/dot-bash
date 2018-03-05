@@ -10,9 +10,11 @@ export BROWSER="conkeror"
 AVAILABLE_LOCALES=`locale -a 2>/dev/null`
 
 if echo $AVAILABLE_LOCALES | grep -iq ^en_US.utf8\$; then
-	LANG=en_US.UTF-8
+    LANG=en_US.UTF-8
+    LANGUAGE=en_US.UTF-8:en_US
 elif echo $AVAILABLE_LOCALES | grep -iq ^en_US\$; then
-	LANG=en_US
+    LANG=en_US
+    LANGUAGE=en_US
 fi
 export LC_COLLATE=C
 export LC_CTYPE="sv_SE.UTF-8"
