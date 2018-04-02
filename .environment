@@ -1,7 +1,7 @@
 # ~/.environment -*- mode: sh -*-
 # this is sourced from both ~/.xsession and ~/.bashrc
 
-export EMAIL="skangas@skangas.se"
+export EMAIL="stefankangas@gmail.com"
 # MANWIDTH seems to screw up e.g. `man convert`:
 # export MANWIDTH=80
 export BROWSER="conkeror"
