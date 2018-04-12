@@ -87,6 +87,11 @@ export DEBEMAIL DEBFULLNAME
 
 export MPD_HOST="/home/skangas/.mpd/socket"
 
+# Add rust stuff if available
+if [ -e ~/.cargo/env ]; then
+    source ~/.cargo/env
+fi
+
 ## I can't change /etc/hosts on all boxes so...
 export chalmers="remote1.student.chalmers.se"
 export monaden="monaden.dvstud.chalmers.se"
