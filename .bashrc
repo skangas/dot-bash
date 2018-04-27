@@ -195,3 +195,5 @@ if [ -f "/home/skangas/.drush/drush.prompt.sh" ] ; then
   source /home/skangas/.drush/drush.prompt.sh
 fi
 
+function x { /home/skangas/wip/mtmigrate/target/release/mtmigrate $2 $1 ~/download/bittorrent }
+function a { /home/skangas/wip/mtmigrate/target/release/mtmigrate $2 $1 ~/download/bittorrent }
