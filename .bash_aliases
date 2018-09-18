@@ -124,3 +124,5 @@ alias wget="wget --user-agent='Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.
 alias wgetm="wget --mirror --no-parent --convert-links --page-requisites --html-extension"
 # aggressive mirroring; no wait time
 alias wgetma="wgetm --wait 0"
+
+alias joffemount="sshfs sk1917.duckdns.org:/home/skangas /Users/skangas/joffe2/ -o reconnect,follow_symlinks,volname='joffe-SSHFS'"
