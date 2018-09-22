@@ -202,3 +202,6 @@ function a {
     /home/skangas/wip/mtmigrate/target/release/mtmigrate $2 $1 ~/download/bittorrent
 }
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
