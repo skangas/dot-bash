@@ -10,6 +10,9 @@ alias ll="ls -l"
 alias lal="ls -al"
 alias hist="history"
 
+# aliases for coding ruby on rails
+alias rs="./bin/rails server"
+
 # use nice cal command on Debian
 #alias cal="cal -m"
 
