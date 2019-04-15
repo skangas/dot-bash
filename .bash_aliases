@@ -10,6 +10,11 @@ alias ll="ls -l"
 alias lal="ls -al"
 alias hist="history"
 
+# aliases for coding ruby on rails
+alias rs="./bin/rails server"
+
+alias madd="find $HOME/music/incoming -maxdepth 1 -type d |shuf --random-source=/dev/urandom -n1|mpc add"
+
 # use nice cal command on Debian
 #alias cal="cal -m"
 
