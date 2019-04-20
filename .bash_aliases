@@ -3,17 +3,20 @@
 # convenience aliases
 alias E="SUDO_EDITOR='emacsclient -c -a emacs' sudoedit"
 alias ..="cd .."
+alias c="cd"
 alias l="ls"
 alias sl="ls"
 alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
+alias lrt="ls -rt"
 alias hist="history"
 
 # aliases for coding ruby on rails
 alias rs="./bin/rails server"
 
 alias madd="find $HOME/music/incoming -maxdepth 1 -type d |shuf --random-source=/dev/urandom -n1|mpc add"
+alias count_incoming_music_dir="ls -l $HOME/music/incoming | wc -l"
 
 # use nice cal command on Debian
 #alias cal="cal -m"
