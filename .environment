@@ -33,7 +33,7 @@ export PERL5LIB="$HOME/usr/lib/perl5"
 export PYTHONPATH="$HOME/usr/lib/python2.6/site-packages:$PYTHONPATH"
 
 # Java
-export CLASSPATH="/usr/share/java/*:/home/skangas/src/jfsaccounting/trunk/administration/src/:/home/skangas/src/jfsaccounting/trunk/administration/test/:."
+#export CLASSPATH="/usr/share/java/*:/home/skangas/src/jfsaccounting/trunk/administration/src/:/home/skangas/src/jfsaccounting/trunk/administration/test/:."
 
 # Use local lib
 export LD_LIBRARY_PATH="/home/skangas/usr/lib"
