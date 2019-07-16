@@ -11,6 +11,7 @@ alias ll="ls -l"
 alias lal="ls -al"
 alias lrt="ls -rt"
 alias hist="history"
+alias dff="df -h | egrep -v '^(udev|tmpfs)'"
 
 # aliases for coding ruby on rails
 alias rs="./bin/rails server"
