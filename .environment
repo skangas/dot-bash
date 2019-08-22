@@ -55,7 +55,7 @@ CVSEDITOR="$EDITOR"
 export CVSEDITOR
 
 # Set up less.
-export LESS="-iM"
+export LESS="-iM -F -X -R"
 export PAGER=less
 # make less more friendly for non-text input files, see lesspipe(1)
 [[ -x "`which lesspipe`" ]] && eval "$(lesspipe)"
