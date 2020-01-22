@@ -1,5 +1,5 @@
 # ~/.environment -*- mode: sh -*-
-# this is sourced from both ~/.xsession and ~/.bashrc
+# this is sourced from both ~/.xsession, ~/.zshrc and ~/.bashrc
 
 export EMAIL="stefankangas@gmail.com"
 # MANWIDTH seems to screw up e.g. `man convert`:
