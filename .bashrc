@@ -1,5 +1,7 @@
 # ~skangas/.bashrc
 
+export PATH=$HOME/bin:$PATH
+
 # If not running interactively, don't do anything
 #[ -z "$PS1" ] && return
 # ^ the commented method causes errors with scp
