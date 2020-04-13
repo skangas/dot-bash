@@ -24,7 +24,7 @@ export TIME_STYLE=long-iso
 #export DISPLAY=":0.0"
 
 # CVS
-export CVS_RSH=SSH
+export CVS_RSH=ssh
 
 # Perl
 export PERL5LIB="$HOME/usr/lib/perl5"
