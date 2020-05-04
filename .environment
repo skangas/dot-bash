@@ -41,7 +41,8 @@ export LD_RUN_PATH=$LD_LIBRARY_PATH
 
 # Emacs
 if [ -x `which emacsclient` ]; then
-    EDITOR="emacsclient -a 'emacs --no-desktop'"
+    # EDITOR="emacsclient -a 'emacs --no-desktop -nw'"
+    EDITOR="~/wip/emacs/lib-src/emacsclient -a 'emacs --no-desktop -nw'"
     ALTERNATE_EDITOR="emacs"
 else
     EDITOR=emacs
