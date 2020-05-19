@@ -52,6 +52,9 @@ alias ssh="ssh -v"
 alias mnt="sudo mount -o uid=`whoami`"
 alias myip="curl ipinfo.io"
 
+alias emacs_make_use="./configure && make -j9"
+alias emacs_devel="./configure --enable-checking='yes,glyphs' --enable-check-lisp-object-type CFLAGS='-O0 -g3' && make -j9"
+
 # alias latest="find -maxdepth 1 -type f -print0|xargs -r0 ls -tr1|tail -1|tr -d '\n' |xargs -0"
 # alias latest_mkcpy="cp -n "`latest`" "`latest|sed -r 's/201[0-9]-[0-1][0-9]-[0-3][0-9]/'"\`date +%Y-%m-%d\`/"`""
 
