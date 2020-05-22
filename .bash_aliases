@@ -1,5 +1,8 @@
 # ~/.aliases -*- mode: sh -*-
 
+# drupal 8
+alias drush=/home/skangas/wip/marxist.se/thunder/drush.wrapper
+
 # convenience aliases
 alias E="SUDO_EDITOR='emacsclient -c -a emacs' sudoedit"
 alias ..="cd .."
