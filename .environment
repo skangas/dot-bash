@@ -16,6 +16,8 @@ elif echo $AVAILABLE_LOCALES | grep -iq ^en_US\$; then
     LANG=en_US
     LANGUAGE=en_US
 fi
+export LANG
+export LANGUAGE
 export LC_COLLATE=C
 export LC_CTYPE="sv_SE.UTF-8"
 export TIME_STYLE=long-iso
